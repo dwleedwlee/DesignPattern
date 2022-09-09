@@ -1,3 +1,5 @@
+/* https://refactoring.guru/design-patterns/prototype/cpp/example */
+
 #include <iostream>
 #include <string>
 #include <vector>
