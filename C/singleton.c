@@ -49,7 +49,6 @@ void *ThreadFoo(void *arg){
     sleep(1);
     Singleton_t* singleton = Singleton_GetInstance("FOO");
     printf("%s\n", Singleton_value(singleton));
-	fflush(stdout);
 }
 
 void *ThreadBar(void *arg){
@@ -57,7 +56,6 @@ void *ThreadBar(void *arg){
     sleep(1);
     Singleton_t* singleton = Singleton_GetInstance("BAR");
     printf("%s\n", Singleton_value(singleton));
-	fflush(stdout);
 }
 
 int main()
