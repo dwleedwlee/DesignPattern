@@ -63,11 +63,11 @@ typedef struct ConcreteCreator2 {
 ConcreteProduct1_t g_ConcreteProduct1;
 ConcreteProduct2_t g_ConcreteProduct2;
 
-Product_t *ConcreteCreator1_FactoryMethod(Creator_t *pThis) {
+Product_t *ConcreteCreator1_FactoryMethod(ConcreteCreator1_t *pThis) {
 	return (Product_t *)ConcreteProduct1_Init(&g_ConcreteProduct1); /* upcasting */
 }
 
-Product_t *ConcreteCreator2_FactoryMethod(Creator_t *pThis) {
+Product_t *ConcreteCreator2_FactoryMethod(ConcreteCreator1_t *pThis) {
 	return (Product_t *)ConcreteProduct2_Init(&g_ConcreteProduct2); /* upcasting */
 }
 
