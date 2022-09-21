@@ -58,6 +58,7 @@ int Iterator_Current(Iterator_t *pThis) {
 /* Single iterator instance */
 Iterator_t g_iterator;
 
+/* Implemented Add functions of each data type : int, Data (template function) */
 void Container_Add_int(Container_t *pThis, int *a) {
 	pThis->m_data_.pfVectorAdd(&(pThis->m_data_), a);
 }
@@ -65,6 +66,7 @@ void Container_Add_int(Container_t *pThis, int *a) {
 void Container_Add_Data(Container_t *pThis, Data_t *a) {
 	pThis->m_data_.pfVectorAdd(&(pThis->m_data_), a);
 }
+
 
 Iterator_t *Container_CreateIterator(Container_t *pThis) {
 	return Iterator_Init(&g_iterator, pThis);
@@ -92,9 +94,8 @@ void ClientCode() {
   Iterator_t *it = Container_CreateIterator(&cont);
   for (Iterator_First(it); !Iterator_IsDone(it); Iterator_Next(it)) {
 	vector *pVec = &(it->m_p_data_->m_data_);
-    printf("%d\n", *(int *)(pVec->pfVectorGet(pVec, Iterator_Current(it))) );
-  }
-  
+    printf("%d\n", *(int *)(pVec->pfVectorGet(pVec, Iterator_Current(it))) ); /* void * -> int * */
+  }  
 
   Container_t cont2;
   Container_Init(&cont2);
@@ -111,7 +112,7 @@ void ClientCode() {
   Iterator_t *it2 = Container_CreateIterator(&cont2);  
   for (Iterator_First(it2); !Iterator_IsDone(it2); Iterator_Next(it2)) {
 	vector *pVec = &(it->m_p_data_->m_data_);
-    printf("%d\n", Data_data((Data_t *)(pVec->pfVectorGet(pVec, Iterator_Current(it)))) );
+    printf("%d\n", Data_data((Data_t *)(pVec->pfVectorGet(pVec, Iterator_Current(it)))) ); /* void * -> Data_t * */
   }
 }
 
