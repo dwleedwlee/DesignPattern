@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include <inttypes.h>
 #include <string.h>
-#include "list.h"
+#include "linkedlist.h"
 
 typedef struct Component Component_t;
 
@@ -176,4 +176,3 @@ int main() {
 
   return 0;
 }
-	

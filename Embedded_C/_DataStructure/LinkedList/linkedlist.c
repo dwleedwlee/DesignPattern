@@ -1,6 +1,6 @@
 /* https://github.com/Leyxargon/c-linked-list.git */
 
-#include "list.h"
+#include "linkedlist.h"
 
 Node *newNode(int x) {
 	Node *pnt = (Node *) malloc (sizeof(Node)); /* allocates physical memory for the node */

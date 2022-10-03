@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "dict.h"
+#include "dictionary.h"
 
 //#define TEST /* Comment this line out to compile without a main function (used when including into another application). */
 

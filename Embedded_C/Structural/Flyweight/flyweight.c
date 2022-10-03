@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <inttypes.h>
-#include "dict.h"
+#include "dictionary.h"
 
 #define NUM_FLYWEIGHT_OBJECT	10
 

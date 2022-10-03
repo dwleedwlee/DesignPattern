@@ -1,6 +1,5 @@
 
 /* thread safe global variable */ 
-/* (Link pthread library) gcc singleton.c -lpthread */
 
 #include <stdio.h>
 #include <stdbool.h>
