@@ -14,3 +14,6 @@ add_subdirectory(Embedded_C/_DataStructure)
 add_subdirectory(Embedded_C/Creational)
 add_subdirectory(Embedded_C/Behavioral)
 add_subdirectory(Embedded_C/Structural)
+
+#To Do: Link to data structure
+add_subdirectory(Embedded_C/_MemoryPool)
