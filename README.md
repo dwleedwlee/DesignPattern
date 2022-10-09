@@ -12,6 +12,6 @@ https://github.com/RefactoringGuru/design-patterns-cpp/
 
 It would be helpful to apply adequite design patterns for refactoring embedded C code.
 
-[Dependency].
-Install minGW and cmake/make for Windows required.
-Please check the mingw32-pthreads-w32 option when install minGW.
+[Dependency]
+Install minGW and cmake/make for Windows required
+Please check the mingw32-pthreads-w32 option when install minGW
